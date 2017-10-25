@@ -31,7 +31,7 @@ public class AEXBanner extends Application {
     @Override
     public void start(Stage primaryStage) throws RemoteException, NotBoundException {
 
-        controller = new BannerController(this,"127.0.0.1",1099);
+        controller = new BannerController(this,"192.168.1.114",1099);
 
         Font font = new Font("Arial", HEIGHT);
         text = new Text();
