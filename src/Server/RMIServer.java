@@ -106,7 +106,7 @@ public class RMIServer {
         System.out.println("SERVER USING REGISTRY");
 
         // Print IP addresses and network interfaces
-       // printIPAddresses();
+       printIPAddresses();
 
         // Create server
         RMIServer server = new RMIServer();
