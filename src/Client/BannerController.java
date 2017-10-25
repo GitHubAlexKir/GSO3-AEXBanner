@@ -1,17 +1,13 @@
-package sample;
+package Client;
 
 import shared.IEffectenbeurs;
-import shared.IFonds;
 import shared.IListener;
 
-import java.beans.PropertyChangeEvent;
-import java.io.Serializable;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
-import java.util.List;
 
 public class BannerController extends UnicastRemoteObject implements IListener {
 

@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="GSO3-AEXBanner-server:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/GSO3_AEXBanner_server_jar</output-path>
+    <root id="archive" name="GSO3-AEXBanner.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/src/Server/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="GSO3-AEXBanner" />
+    </root>
+  </artifact>
+</component>
