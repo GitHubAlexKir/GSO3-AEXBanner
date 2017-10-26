@@ -9,6 +9,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import sun.security.x509.IPAddressName;
 
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
@@ -28,10 +29,12 @@ public class AEXBanner extends Application {
     private BannerController controller;
     private AnimationTimer animationTimer;
 
+    private static String IP;
+
     @Override
     public void start(Stage primaryStage) throws RemoteException, NotBoundException {
-
-        controller = new BannerController(this,"127.0.0.1",1099);
+        System.out.println("IP: " + IP);
+        controller = new BannerController(this,IP,1099);
 
         Font font = new Font("Arial", HEIGHT);
         text = new Text();
@@ -89,5 +92,16 @@ public class AEXBanner extends Application {
     public void stop() throws RemoteException {
         animationTimer.stop();
         controller.stop();
+    }
+    public static void main(String[] args) {
+        if (args.length != 0){
+            IP = args[0];
+        }
+        else
+        {
+            IP = "127.0.0.1";
+        }
+
+        Application.launch(args);
     }
 }
